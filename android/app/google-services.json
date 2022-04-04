@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "131054841857",
+    "project_id": "trinityflutterauth",
+    "storage_bucket": "trinityflutterauth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131054841857:android:15930b37feb99b46331000",
+        "android_client_info": {
+          "package_name": "com.thomas.trinityauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "131054841857-fodnbtgddi8idhrfgp19ena5ik1oj2vc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWj7ra1hYPBC50tNj4GsBmuEVpdl3ODo0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "131054841857-fodnbtgddi8idhrfgp19ena5ik1oj2vc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
