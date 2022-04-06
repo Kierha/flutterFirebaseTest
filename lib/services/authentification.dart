@@ -10,15 +10,19 @@ class AuthentificationService {
     return user != null ? AppUser(uid: user.uid) : null;
   }
 
+// Permet de récupérer un user courant / Permet de redireger soit vers page auth soit home
   Stream<AppUser?> get user {
     return _auth.authStateChanges().map(_userFromFirebaseUser);
   }
 
   Future signInWithEmailAndPassword(String email, String password) async {
     try {
-      await _auth.signInWithEmailAndPassword(email: email, password: password);
-      return "Signed in";
-      // return _userFromFirebaseUser(user);
+      UserCredential result = await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
+
+      User? user = result.user;
+      // return "Signed in";
+      return _userFromFirebaseUser(user);
     } catch (exception) {
       print(exception.toString());
       return "erreur de connexion";

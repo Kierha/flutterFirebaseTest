@@ -10,6 +10,7 @@ class Loading extends StatelessWidget {
       color: Colors.white,
       child: const Center(
         child: SpinKitRipple(
+          size: 40.0,
           color: Colors.blue,
         ),
       ),

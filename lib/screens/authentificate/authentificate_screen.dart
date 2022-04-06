@@ -99,9 +99,6 @@ class _AuthentificateScreenState extends State<AuthentificateScreen> {
                           var password = passwordController.value.text;
                           print(password);
 
-                          // ignore: todo
-                          // TODO Call firebase auth
-
                           dynamic result = showSignIn
                               ? await _auth.signInWithEmailAndPassword(
                                   email, password)

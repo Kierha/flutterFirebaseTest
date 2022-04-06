@@ -10,6 +10,11 @@ class SplashScreenWrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const AuthentificateScreen();
+    final user = Provider.of<AppUser?>(context);
+    if (user == null) {
+      return const AuthentificateScreen();
+    } else {
+      return HomeScreen();
+    }
   }
 }
