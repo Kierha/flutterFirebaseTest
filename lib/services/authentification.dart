@@ -2,6 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:trinityauth/common/models/user.dart';
+import 'package:trinityauth/services/database.dart';
 
 class AuthentificationService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -39,6 +40,7 @@ class AuthentificationService {
 
       // ignore: todo
       // TODO Store new user in Firestore
+      await DatabaseService(user!.uid).saveUser(email, 0);
 
       return _userFromFirebaseUser(user);
     } catch (exception) {
