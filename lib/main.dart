@@ -34,7 +34,6 @@ class MyApp extends StatelessWidget {
       child: Builder(
         builder: (context) => MaterialApp(
           debugShowCheckedModeBanner: false,
-          theme: ThemeProvider
           title: title,
           home: ProfilePage(),
         ),
