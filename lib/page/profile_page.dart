@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:trinityauth/model/user.dart';
+import 'package:trinityauth/page/edit_profile_page.dart';
 import 'package:trinityauth/utils/user_preferences.dart';
 import 'package:trinityauth/widget/appbar_widget.dart';
 import 'package:trinityauth/widget/button_widget.dart';
@@ -25,7 +26,14 @@ class _ProfilePageState extends State<ProfilePage> {
         children: [
           ProfileWidget(
             imagePath: user.imagePath,
-            onClicked: () async {},
+            onClicked: () async {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => EditProfilePage(),
+                ),
+              );
+            },
           ),
           const SizedBox(height: 24),
           buildName(user),
@@ -71,7 +79,8 @@ class _ProfilePageState extends State<ProfilePage> {
             const SizedBox(height: 16),
             Text(
               user.about,
-              style: TextStyle(fontSize: 16, height: 1.4),
+              style: TextStyle(
+                  fontSize: 16, height: 1.4, fontWeight: FontWeight.bold),
             ),
           ],
         ),
